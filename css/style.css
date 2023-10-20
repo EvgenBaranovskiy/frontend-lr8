@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: honeydew;
+}
+
+body {
+    min-width: 150px;
+    min-height: 280px;
+}
+
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.player {
+    background-color: thistle;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.player-name {
+    font-size: 35px;
+    text-shadow: 1px 1px 5px black;
+    margin: 10px;
+}
+
+.total-score {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 15px 5px;
+    margin: 0px 15px;
+    border-radius: 25px;
+    background-color: darkturquoise;
+}
+
+#generate-button {
+    background-color: chartreuse;
+    font-size: 30px;
+    margin: 0px 25px;
+    padding: 15px 0px;
+    border-radius: 25px;
+}
+
+    #generate-button:active {
+        background-color: darkolivegreen;
+    }
+
+.control-panel {
+    background-color: burlywood;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.generated-number {
+    background-color: yellow;
+    width: 110px;
+    height: 110px;
+    text-align: center;
+    font-size: 30px;
+    border: solid 3px black;
+    border-radius: 100%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media all and (max-height: 450px) {
+    body {
+        height: 450px;
+    }
+}
+
+@media all and (max-height: 550px) {
+
+    .generated-number {
+        height: 60px;
+        width: 60px;
+    }
+
+    .player-name {
+        font-size: 28px;
+        margin: 5px;
+    }
+
+    .total-score {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 5px 2px;
+        margin: 0px 75px;
+    }
+
+    #generate-button {
+        font-size: 25px;
+        margin: 0px 55px;
+        padding: 10px 0px;
+        border-radius: 25px;
+    }
+}
+
+@media all and (max-width: 300px) {
+    #generate-button {
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width: 600px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .generated-number {
+        height: 80px;
+        width: 80px;
+    }
+
+    .player {
+        width: 100%;
+        height: 40%;
+    }
+
+    .control-panel {
+        width: 100%;
+        height: 20%;
+    }
+}

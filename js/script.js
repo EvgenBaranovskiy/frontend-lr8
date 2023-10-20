@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     //Функція для перевірки валідності ім я гравця
     function isValidPlayerName(playerName) {
-        return String(playerName).trim().length > 0;
+        return playerName != null && String(playerName).trim().length > 0;
     }
 
     //Функція для встановлення ім я гравця

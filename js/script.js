@@ -11,15 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     //Ввод імені гравця
-    while (true) {
-        firstPlayerName = prompt("Введіть ваше ім'я: ", "Player");
-        if (isValidPlayerName(firstPlayerName)) {
+	firstPlayerName = prompt("Введіть ваше ім'я: ", "Player");
+	if (firstPlayerName!= null && isValidPlayerName(firstPlayerName)) {
             setPlayerName(firstPlayerName);
-            break;
-        } else {
-            alert("Щось з Вашим ім'ям не так!");
-        }
-    }
+	} else {
+		alert("Щось с Вашим ім'ям не так! Розмір ім'я повинен бути від 1 до 18 символів!");
+		window.location.reload();
+	}
 
     //Початок гри
     //generateAndCompare();
@@ -59,7 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     //Функція для перевірки валідності ім я гравця
     function isValidPlayerName(playerName) {
-        return playerName != null && String(playerName).trim().length > 0;
+		const trimmedName = playerName.trim();
+		return trimmedName.length > 0 && trimmedName.length <= 18;
     }
 
     //Функція для встановлення ім я гравця

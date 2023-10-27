@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (firstPlayerName!= null && isValidPlayerName(firstPlayerName)) {
             setPlayerName(firstPlayerName);
 	} else {
-		alert("Щось с Вашим ім'ям не так! Розмір ім'я повинен бути від 1 до 18 символів!");
+		alert("Щось з Вашим ім'ям не так! Розмір ім'я повинен бути від 1 до 18 символів!");
 		window.location.reload();
 	}
 
@@ -69,8 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Функція, яка генерує та порівнює отримані очки для кожного гравця
     function generateAndCompare() {
-        var randomForFirstPlayer = Math.floor(Math.random() * 100);
-        var randomForSecondPlayer = Math.floor(Math.random() * 100);
+        let randomForFirstPlayer = Math.floor(Math.random() * 100);
+        let randomForSecondPlayer = Math.floor(Math.random() * 100);
 
         firstPlayerGeneratedNumDiv.innerText = randomForFirstPlayer;
         secondPlayerGeneratedNumDiv.innerText = randomForSecondPlayer;
